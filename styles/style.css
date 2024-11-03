@@ -2,4 +2,121 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  margin: 0 auto;
+  background-color: var(--accened-text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+/* header start */
+
+.header {
+  padding: 75px var(--horizontal-padding) 66px; /* -d */
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.decorated-zone {
+  min-height: 668px;
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-start: var(--horizontal-padding);
+  inset-block-end: var(--horizontal-padding);
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: var(--horizontal-padding);
+  inset-block-start: var(--horizontal-padding);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.header__rec {
+  position: absolute;
+  color: var(--button-color);
+  font-size: 18px;
+  line-height: 139%;
+  text-transform: uppercase;
+  inset-block-start: 11px;
+  inset-inline-end: 40px;
+}
+
+.header__rec::after {
+  content: "";
+  position: absolute;
+  block-size: 5px;
+  inline-size: 5px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 4px var(--button-color);
+  color: var(--button-color);
+  background-color: var(--button-color);
+  inset-inline-end: -18px;
+  inset-block-start: 9px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  color: var(--button-color);
+  padding: 1.5px 13px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--button-color);
+  pointer-events: none;
+}
+
+.title {
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  font-weight: var(--font-weight);
+}
+
+.header__title {
+  color: var(--header-title-color);
+  font-weight: 700;
+  line-height: 83%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  padding-bottom: 8px;
+}
+
+.header__description {
+  color: var(--accened-text-color);
+  background-color: var(--accent-color);
+  justify-self: end;
+  align-self: end;
+  font-weight: 700;
+}
+
+/* header end */
