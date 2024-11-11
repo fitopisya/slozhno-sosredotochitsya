@@ -12,10 +12,13 @@
   --articles-gap: 20px;
   --font-weight: 400;
 
+  --bg-color: ##000028;
   --accent-color: #ff0070;
   --decor-color: #000028;
   --header-title-color: #db00ff;
   --button-color: #ff0070;
   --text-color: #f1b2ce;
   --button-hover-color: rgba(255, 0, 112, 0.5);
+  --bg-color: #000028;
+  --rec-color: #ff0070;
 }
