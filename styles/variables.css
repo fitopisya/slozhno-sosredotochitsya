@@ -9,7 +9,9 @@
   --font-size: 18px;
   --header-font-weight: 700;
   --line-height: 130%;
-  --articles-gap: 20px;
+  --section-gap: 80px;
+  --article-gap: 20px;
+  --block-gap: 60px;
   --font-weight: 400;
 
   --bg-color: ##000028;
