@@ -5,7 +5,7 @@
 
 :root {
   --bg-image: url("../images/cover-image-dark.png");
-  --font-family: 'IBM Plex Mono', monospace;
+  --font-family: "IBM Plex Mono", monospace;
   --font-size: 18px;
   --header-font-weight: 700;
   --line-height: 130%;
