@@ -17,6 +17,7 @@
 .decorated-zone {
   min-block-size: 668px;
   height: 100vh;
+  position: relative;
 }
 
 .header {
@@ -50,7 +51,8 @@
   box-shadow: 0 0 4px 2px currentColor;
 }
 
-.decorated-zone::before, .decorated-zone::after {
+.decorated-zone::before, 
+.decorated-zone::after {
   content: '';
   inline-size: 25px;
   block-size: 25px; 
@@ -111,6 +113,7 @@ button {
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--button-color);
+  pointer-events: none;
 }
 
 button:hover {
@@ -137,10 +140,6 @@ button:focus-visible {
   cursor: pointer;
 }
 
-.header__theme-menu-button_active {
-  pointer-events: none;
-}
-
 /* nav menu end */
 /* header end */
 
@@ -156,11 +155,6 @@ a:hover {
 
 a:focus-visible {
   outline: 1px solid currentColor;
-}
-
-.decorated-zone {
-  min-block-size: 668px;
-  position: relative;
 }
 
 .title-decor {
@@ -191,6 +185,7 @@ a:focus-visible {
 .card__title {
   color: var(--accent-color);
   font-size: 18px;
+  max-inline-size: 315px;
 }
 
 .card.title-up {
@@ -214,10 +209,6 @@ a:focus-visible {
 
 .title-light-weight {
   font-weight: 400;
-}
-
-.card__title {
-  max-inline-size: 315px;
 }
 
 .card:not(.title-up) {
