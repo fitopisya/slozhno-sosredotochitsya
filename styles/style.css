@@ -12,11 +12,11 @@
 
 .decorated-zone {
   position: relative;
-  height: 100vh;
-  min-block-size: 668px;
 }
 
 .header {
+  height: 100vh;
+  min-block-size: 668px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   margin: 0 auto;
@@ -25,10 +25,12 @@
 }
 
 .rec {
+  display: var(--rec-display);
   color: var(--rec-color);
 }
 
 .rec::before {
+  display: var(--rec-display);
   content: "REC";
   position: absolute;
   top: 20px;
@@ -36,6 +38,7 @@
 }
 
 .rec::after {
+  display: var(--rec-display);
   content: "";
   position: absolute;
   top: 28px;
@@ -52,9 +55,9 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
-  color: var(--accent-color);
+  border-inline-start: 1px solid var(--button-color);
+  border-block-end: 1px solid var(--button-color);
+  color: var(--button-color);
   inline-size: 25px;
   block-size: 25px;
 }
@@ -64,9 +67,9 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
-  color: var(--accent-color);
+  border-inline-end: 1px solid var(--button-color);
+  border-block-start: 1px solid var(--button-color);
+  color: var(--button-color);
   inline-size: 25px;
   block-size: 25px;
 }
@@ -171,7 +174,7 @@ a:focus-visible {
 }
 
 .card__title {
-  color: var(--accent-color);
+  color: var(--card-title-color);
   font-size: 18px;
   max-inline-size: 315px;
 }
@@ -245,6 +248,8 @@ a:focus-visible {
 }
 
 .footer {
+  height: 100vh;
+  min-block-size: 668px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -285,6 +290,14 @@ a:focus-visible {
   .card:not(.title-up) {
     display: grid;
     grid-template-columns: 35% 65%;
+  }
+}
+
+@media (width <= 750px) {
+  .card:not(.title-up) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -345,12 +358,6 @@ a:focus-visible {
   .content {
     margin-block-end: 30px;
     padding: 10px;
-  }
-
-  .card:not(.title-up) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
   }
 
   .card__title {

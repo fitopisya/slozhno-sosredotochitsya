@@ -5,6 +5,7 @@
   */
   --bg-image: url("../images/cover-image-light.png");
   --accent-color: #ff8dcb;
+  --card-title-color: #353430;
   --decor-color: #353430;
   --header-title-color: #ffc2e6;
   --button-color: #353430;
@@ -12,13 +13,14 @@
   --button-hover-color: rgba(53, 52, 48, 0.5);
   --bg-color: #fff1f7;
   --rec-color: #fff1f7;
+  --rec-display: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    /* Дублируем переменные светлой темы */
     --bg-image: url("../images/cover-image-light.png");
     --accent-color: #ff8dcb;
+    --card-title-color: #353430;
     --decor-color: #353430;
     --header-title-color: #ffc2e6;
     --button-color: #353430;
@@ -26,5 +28,6 @@
     --button-hover-color: rgba(53, 52, 48, 0.5);
     --bg-color: #fff1f7;
     --rec-color: #fff1f7;
+    --rec-display: none;
   }
 }
